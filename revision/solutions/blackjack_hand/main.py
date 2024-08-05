@@ -9,7 +9,7 @@ def main():
     dealer_input = input("Enter dealer's hand: ")
     blackjack.add_hand(dealer_input, dealer=True)
     player_idx = 1
-    while player_input := input(f"Enter player{player_idx}'s hand (empty line to finish):"):
+    while player_input := input(f"Enter player{player_idx}'s hand (empty line to finish): "):
         blackjack.add_hand(player_input)
         player_idx += 1
     print()

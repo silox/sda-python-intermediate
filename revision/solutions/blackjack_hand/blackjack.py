@@ -25,8 +25,6 @@ class BlackJack:
 
         dealer_result = self.dealer.calculate_hand_value()
         players_results = [player.calculate_hand_value() for player in self.hands]
-        print(dealer_result)
-        print(players_results)
 
         # Everyone over 21
         if dealer_result > 21 and all(res > 21 for res in players_results):
@@ -42,5 +40,5 @@ class BlackJack:
             for player_idx, res in enumerate(players_results, start=1)
             if dealer_result < res <= 21
         ]
-        print('winners', winners)
+
         return winners or ['dealer']

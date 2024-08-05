@@ -11,7 +11,6 @@ class BlackJackHand:
             self.add_card(card)
 
     def add_card(self, card):
-        print(self.used_cards)
         if card in BlackJackHand.used_cards:
             raise ValidationException('Duplicate card')
 
